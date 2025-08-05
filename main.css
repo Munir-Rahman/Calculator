@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-size: 1.5rem;
+    display: flex;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    color: #fff;
+    position: relative;
+}
+.container .top-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    border: 2px solid #777;
+    height: 3.4rem;
+    font-size: 2rem;
+}
+.name ,
+.history-menu{
+    position: relative;
+    width: 100%;
+}
+.history-menu h2{
+    text-align: right;
+    margin-top: -0.8rem;
+    margin-right: 0.2rem;
+}
+.history-menu h2 button{
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #444;
+}
+.history-menu h2 button:hover{
+    background-color: #ffffffab;
+    color: #444;
+}
+.history-menu h2 button:active{
+    background-color: white;
+    color: #000;
+}
+.history{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    width: 60%;
+    height: 74vh;
+    background-color: #444;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.history li{
+    display: block;
+    word-wrap: break-word;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    background: #444;
+    border-bottom: 2px solid rgb(40, 41, 41);
+}
+.history li:hover{
+    background: #292828;
+}
+.name h2{
+    text-align: right;
+    margin-right: -8rem;
+}
+.name h2:hover{
+    color: #888;
+}
+.answer-field{
+    display: flex;
+    height: 6rem;
+    width: 100%;
+    font-size: 4rem;
+    border: 2px solid #777;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.answer-field p{
+    padding-left: 4rem;
+}
+.menu{
+    display: block;
+    width: 150px;
+    height: 100%;
+    text-align: center;
+    background-color: gray;
+    border: 2px solid #777;
+    line-height: 0.5rem;
+}
+.menu h2{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    text-decoration: underline;
+}
+.menu span{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.menu span:hover{
+    text-decoration: underline;
+}
+.keypad-btns{
+    display: grid;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.1rem;
+    border: 2px solid #777;
+    z-index: -1000;
+}
+.keypad-btns .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7rem;
+    height: 6rem;
+    width: 100%;
+    color: #fff;
+    background-color: #555;
+    border: 2px solid black;
+    font-weight: 600;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.keypad-btns .btn:hover{
+    background-color: #444;
+    color: #fff;
+}
+.keypad-btns .btn:active{
+    background-color: #333;
+    color: white;
+}
+/* Set Value for Operations Sign */
+.btn:nth-child(1),
+.btn:nth-child(2),
+.btn:nth-child(3),
+.btn:nth-child(4),
+.btn:nth-child(5),
+.btn:nth-child(6),
+.btn:nth-child(7),
+.btn:nth-child(8),
+.btn:nth-child(16),
+.btn:nth-child(12),
+.btn:nth-child(20){
+    background-color: #444;
+}
+.btn:nth-child(1):hover,
+.btn:nth-child(2):hover,
+.btn:nth-child(3):hover,
+.btn:nth-child(4):hover,
+.btn:nth-child(5):hover,
+.btn:nth-child(6):hover,
+.btn:nth-child(7):hover,
+.btn:nth-child(8):hover,
+.btn:nth-child(16):hover,
+.btn:nth-child(12):hover,
+.btn:nth-child(20):hover{
+    background-color: #555;
+}
+.btn:nth-child(1):active,
+.btn:nth-child(2):active,
+.btn:nth-child(3):active,
+.btn:nth-child(4):active,
+.btn:nth-child(5):active,
+.btn:nth-child(6):active,
+.btn:nth-child(7):active,
+.btn:nth-child(8):active,
+.btn:nth-child(16):active,
+.btn:nth-child(12):active,
+.btn:nth-child(20):active{
+    background-color: #444;
+}
+#equal{
+    color: #fff;
+    background-color: rgba(61, 167, 234, 0.977);
+}
+#equal:hover{
+    color: #ffffffb8;
+    background-color: rgba(61, 168, 234, 0.88);
+}
+#equal:active{
+    color: #ffffff75;
+    background-color: rgba(61, 168, 234, 0.704);
+}
+
+/* Resposive Desing */
+@media (max-width : 600px){
+    .container .top-text .name{
+        width: 50%;
+        font-size: 1rem;
+    }
+    h2 #history-btn{
+        font-size: 1rem;
+        border-radius: 0;
+    }
+    .menu{
+        width: 100px;
+    }
+    .menu span{
+        font-size: 1rem;
+    }
+
+}
